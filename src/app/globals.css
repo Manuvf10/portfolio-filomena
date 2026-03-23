@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-stone text-ink antialiased;
+}
+
+a {
+  @apply transition-colors duration-300;
+}
+
+*:focus-visible {
+  @apply outline-none ring-2 ring-olive ring-offset-2 ring-offset-stone;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.editorial-title {
+  @apply font-serif leading-[0.95] tracking-tight;
+}
+
+.section-space {
+  @apply py-16 md:py-24;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: inline-block;
+  min-width: 200%;
+  animation: marquee 24s linear infinite;
+}
