@@ -33,25 +33,36 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         workHref={localizedPath(locale, '/projects')}
         workLabel={dict.common.exploreWork}
       />
-      <MarqueeBlock />
 
-      <section className="section-space border-b border-zinc-200/70">
+      <section className="border-b border-zinc-300 py-10">
         <div className="container-shell">
-          <SectionHeading title={dict.home.introTitle} description={dict.home.introBody} />
+          <MarqueeBlock />
         </div>
       </section>
 
-      <section className="section-space border-b border-zinc-200/70">
-        <div className="container-shell">
-          <SectionHeading title={dict.home.servicesTitle} description={dict.home.servicesIntro} />
+      <section className="section-space border-b border-zinc-300">
+        <div className="container-shell grid gap-8 md:grid-cols-12 md:items-end">
+          <div className="md:col-span-7">
+            <SectionHeading eyebrow="Filomena" title={dict.home.introTitle} description={dict.home.introBody} />
+          </div>
+          <div className="border border-zinc-300 bg-white/70 p-6 md:col-span-5">
+            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">Creative Studio Notes</p>
+            <p className="mt-3 font-serif text-3xl leading-tight">Dirección estética sólida, ejecución precisa y foco comercial.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space border-b border-zinc-300">
+        <div className="container-shell space-y-10">
+          <SectionHeading eyebrow={dict.nav.services} title={dict.home.servicesTitle} description={dict.home.servicesIntro} />
           <ServiceList content={dict.services.list} />
         </div>
       </section>
 
-      <section className="section-space border-b border-zinc-200/70">
-        <div className="container-shell">
-          <SectionHeading title={dict.home.projectsTitle} description={dict.home.projectsIntro} />
-          <ProjectsGrid content={dict.projects.list} categories={dict.projects.categories} />
+      <section className="section-space border-b border-zinc-300">
+        <div className="container-shell space-y-10">
+          <SectionHeading eyebrow={dict.nav.projects} title={dict.home.projectsTitle} description={dict.home.projectsIntro} />
+          <ProjectsGrid content={dict.projects.list} categories={dict.projects.categories} mode="compact" />
         </div>
       </section>
 

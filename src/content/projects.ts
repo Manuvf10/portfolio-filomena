@@ -7,6 +7,9 @@ export type Project = {
   category: string;
   media: ProjectMedia;
   tone: 'light' | 'dark';
+  format: 'editorial' | 'wide' | 'tall' | 'square' | 'text';
+  location?: string;
+  year?: string;
 };
 
 export const projects: Project[] = [
@@ -14,6 +17,9 @@ export const projects: Project[] = [
     id: 'atelier-norte',
     category: 'branding',
     tone: 'light',
+    format: 'editorial',
+    location: 'Madrid',
+    year: '2025',
     media: {
       type: 'image',
       src: '/images/projects/project-01.svg',
@@ -24,6 +30,9 @@ export const projects: Project[] = [
     id: 'lumen-beauty',
     category: 'content',
     tone: 'dark',
+    format: 'tall',
+    location: 'Barcelona',
+    year: '2025',
     media: {
       type: 'video',
       src: '/videos/project-02.mp4',
@@ -35,6 +44,9 @@ export const projects: Project[] = [
     id: 'casa-viva',
     category: 'web',
     tone: 'light',
+    format: 'wide',
+    location: 'Valencia',
+    year: '2024',
     media: {
       type: 'image',
       src: '/images/projects/project-03.svg',
@@ -45,6 +57,9 @@ export const projects: Project[] = [
     id: 'origen-studio',
     category: 'direction',
     tone: 'dark',
+    format: 'square',
+    location: 'Lisboa',
+    year: '2024',
     media: {
       type: 'image',
       src: '/images/projects/project-04.svg',
@@ -55,6 +70,9 @@ export const projects: Project[] = [
     id: 'salvia-lab',
     category: 'social',
     tone: 'light',
+    format: 'tall',
+    location: 'Bilbao',
+    year: '2026',
     media: {
       type: 'image',
       src: '/images/projects/project-05.svg',
@@ -65,6 +83,9 @@ export const projects: Project[] = [
     id: 'noir-tailor',
     category: 'retouching',
     tone: 'dark',
+    format: 'wide',
+    location: 'Paris',
+    year: '2026',
     media: {
       type: 'image',
       src: '/images/projects/project-06.svg',

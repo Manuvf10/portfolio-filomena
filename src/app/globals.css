@@ -19,15 +19,15 @@ a {
 }
 
 .container-shell {
-  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-10;
 }
 
 .editorial-title {
-  @apply font-serif leading-[0.95] tracking-tight;
+  @apply font-serif leading-[0.93] tracking-[-0.02em];
 }
 
 .section-space {
-  @apply py-16 md:py-24;
+  @apply py-14 md:py-20;
 }
 
 @keyframes marquee {
