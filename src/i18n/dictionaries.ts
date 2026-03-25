@@ -45,6 +45,9 @@ type Dictionary = {
   };
   projects: {
     intro: string;
+    editorialKicker: string;
+    editorialTitle: string;
+    editorialBody: string;
     categories: Record<string, string>;
     list: Record<string, ProjectCopy>;
   };
@@ -94,16 +97,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: { home: 'Inicio', about: 'Sobre Filomena', services: 'Servicios', projects: 'Trabajos', club: 'Nuestro Club', contact: 'Contacto' },
     home: {
       heroKicker: 'Estudio creativo · branding · contenido',
-      heroTitle: 'Diseñamos identidades visuales que elevan marcas con intención.',
-      heroSubtitle: 'Filomena combina mirada editorial, estrategia y ejecución para construir marcas memorables en moda, lifestyle y negocios emergentes.',
-      introTitle: 'Creatividad con dirección',
+      heroTitle: 'Dirección de arte, contenido y diseño para marcas con ambición estética.',
+      heroSubtitle: 'Un estudio creativo 360 para moda, lifestyle y negocios que buscan presencia premium y resultados medibles.',
+      introTitle: 'Una práctica creativa con criterio',
       introBody: 'Creamos sistemas visuales sólidos, piezas con sensibilidad estética y experiencias digitales que conectan con clientes exigentes.',
       servicesTitle: 'Servicios clave',
-      servicesIntro: 'Procesos flexibles para equipos que buscan un partner creativo de confianza.',
+      servicesIntro: 'Servicios modulares con una misma exigencia: coherencia visual, solvencia técnica y foco comercial.',
       projectsTitle: 'Trabajos recientes',
-      projectsIntro: 'Una selección de proyectos con foco en narrativa, detalle y consistencia visual.',
-      ctaTitle: '¿Tienes un proyecto en marcha?',
-      ctaBody: 'Cuéntanos contexto, objetivos y tiempos. Prepararemos una propuesta a medida.'
+      projectsIntro: 'Una selección curada donde cada proyecto combina narrativa, dirección visual y ejecución.',
+      ctaTitle: '¿Buscas una propuesta creativa con dirección?',
+      ctaBody: 'Comparte objetivos, alcance y timing. Recibirás una propuesta clara, realista y alineada a tu marca.'
     },
     about: {
       intro: 'Filomena es un estudio creativo especializado en imagen de marca, dirección visual y contenido para entornos digitales.',
@@ -116,7 +119,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ]
     },
     services: {
-      intro: 'Servicios modulares para construir, lanzar o escalar una marca con una dirección visual sólida.',
+      intro: 'Servicios conectados entre sí para construir marcas con lenguaje visual propio y ejecución consistente.',
       list: {
         'photo-retouching': { title: 'Retoque fotográfico', description: 'Ajustes profesionales de piel, color y luz para campañas, e-commerce y editoriales.' },
         'content-creation': { title: 'Creación de contenido', description: 'Conceptualización y producción de piezas visuales para web, redes y campañas.' },
@@ -129,7 +132,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       }
     },
     projects: {
-      intro: 'Una cuadrícula viva pensada para crecer: añade proyectos fácilmente y mantén un portfolio siempre actualizado.',
+      intro: 'Selección editorial de trabajos en branding, contenido, web y dirección creativa. Formatos mixtos, ritmo visual y contexto breve por proyecto.',
+      editorialKicker: 'Portfolio Filomena',
+      editorialTitle: 'Proyectos con mirada editorial, estrategia y precisión visual.',
+      editorialBody: 'Cada pieza combina dirección de arte, narrativa y ejecución para marcas de moda, lifestyle y negocios con criterio.',
       categories: {
         branding: 'Branding',
         content: 'Contenido',
@@ -148,12 +154,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       }
     },
     club: {
-      intro: 'Nuestro Club nace como un espacio de conexión entre marcas, creativos y colaboradores del estudio.',
-      body: 'Estamos diseñando un formato de encuentros, recursos y conversaciones para impulsar proyectos con sensibilidad visual y enfoque estratégico.',
+      intro: 'Nuestro Club conecta marcas, creativos y colaboradores en un entorno curado y profesional.',
+      body: 'Impulsamos encuentros selectivos, colaboraciones y recursos prácticos para acelerar proyectos con criterio visual y ambición comercial.',
       bullets: ['Sesiones privadas de revisión de marca.', 'Networking curado entre perfiles creativos.', 'Recursos descargables para equipos en crecimiento.']
     },
     contact: {
-      intro: 'Cuéntanos qué estás construyendo y qué necesitas resolver. Te responderemos en un máximo de 48 horas laborables.',
+      intro: 'Describe tu proyecto, objetivos y servicios de interés. Te enviaremos una respuesta estratégica en menos de 48 horas laborables.',
       form: {
         name: 'Nombre',
         email: 'Email',
@@ -191,16 +197,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: { home: 'Home', about: 'About', services: 'Services', projects: 'Projects', club: 'Our Club', contact: 'Contact' },
     home: {
       heroKicker: 'Creative studio · branding · content',
-      heroTitle: 'We design visual identities that elevate brands with intention.',
-      heroSubtitle: 'Filomena merges editorial sensibility, strategy and execution to build memorable brands in fashion, lifestyle and small businesses.',
-      introTitle: 'Creativity with direction',
+      heroTitle: 'Art direction, content and design for brands with visual ambition.',
+      heroSubtitle: 'A 360 creative studio for fashion, lifestyle and independent businesses seeking premium positioning and measurable outcomes.',
+      introTitle: 'Creative practice with intent',
       introBody: 'We craft robust visual systems, refined assets and digital experiences that connect with discerning audiences.',
       servicesTitle: 'Core services',
-      servicesIntro: 'Flexible processes for teams looking for a trusted creative partner.',
+      servicesIntro: 'Modular services with one standard: visual coherence, technical precision and commercial focus.',
       projectsTitle: 'Selected work',
-      projectsIntro: 'A curated collection focused on narrative, detail and visual consistency.',
-      ctaTitle: 'Working on something new?',
-      ctaBody: 'Share your context, goals and timing. We’ll prepare a tailored proposal.'
+      projectsIntro: 'A curated edit where each project balances narrative, visual direction and execution.',
+      ctaTitle: 'Need a creative proposal with direction?',
+      ctaBody: 'Share your goals, scope and timing. You will receive a clear proposal tailored to your brand.'
     },
     about: {
       intro: 'Filomena is a creative studio focused on brand image, visual direction and content for digital-first environments.',
@@ -213,7 +219,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       ]
     },
     services: {
-      intro: 'Modular services to build, launch or scale a brand with a clear visual direction.',
+      intro: 'Connected services designed to build brands with a distinctive visual language and reliable execution.',
       list: {
         'photo-retouching': { title: 'Photo retouching', description: 'Professional skin, color and light adjustments for campaigns, e-commerce and editorials.' },
         'content-creation': { title: 'Content creation', description: 'Concept, production and adaptation of visual assets for web, social and campaigns.' },
@@ -226,7 +232,10 @@ export const dictionaries: Record<Locale, Dictionary> = {
       }
     },
     projects: {
-      intro: 'A living grid designed to scale: add new projects quickly and keep your portfolio fresh.',
+      intro: 'Editorially curated projects across branding, content, web and creative direction. Mixed formats, visual rhythm and concise context.',
+      editorialKicker: 'Filomena Portfolio',
+      editorialTitle: 'Projects shaped through editorial sensibility, strategy and visual precision.',
+      editorialBody: 'Each piece combines art direction, narrative and execution for fashion, lifestyle and visually driven businesses.',
       categories: {
         branding: 'Branding',
         content: 'Content',
@@ -245,12 +254,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       }
     },
     club: {
-      intro: 'Our Club is envisioned as a connection space for brands, creatives and studio collaborators.',
-      body: 'We are shaping a format of gatherings, resources and conversations to drive projects with visual sensitivity and strategic intent.',
+      intro: 'Our Club connects brands, creatives and collaborators in a curated and professional setting.',
+      body: 'We host selective gatherings, collaborations and practical resources to move projects forward with visual clarity and strategic intent.',
       bullets: ['Private brand review sessions.', 'Curated networking between creative profiles.', 'Downloadable resources for growing teams.']
     },
     contact: {
-      intro: 'Tell us what you are building and what needs to be solved. We respond within 48 business hours.',
+      intro: 'Share your project scope, priorities and service needs. We respond with a strategic next step within 48 business hours.',
       form: {
         name: 'Name',
         email: 'Email',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
-import { PageIntro } from '@/components/PageIntro';
+import { SectionHeading } from '@/components/SectionHeading';
 import { siteSettings } from '@/content/settings';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
@@ -19,19 +19,22 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const dict = getDictionary(locale);
 
   return (
-    <>
-      <PageIntro title={dict.nav.contact} description={dict.contact.intro} />
-      <section className="section-space">
-        <div className="container-shell grid gap-10 md:grid-cols-2">
-          <ContactForm labels={dict.contact.form} />
-          <aside className="space-y-5 text-sm text-zinc-700">
+    <section className="section-space">
+      <div className="container-shell grid gap-[2px] bg-zinc-300 md:grid-cols-12">
+        <div className="bg-ink p-8 text-stone md:col-span-5 md:p-10">
+          <SectionHeading eyebrow="Filomena" title={dict.nav.contact} description={dict.contact.intro} inverted />
+          <div className="space-y-4 border-t border-stone/20 pt-6 text-sm text-stone/80">
             <p>
               {dict.common.contactEmail}: <a className="underline" href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
             </p>
             <p>{siteSettings.location}</p>
-          </aside>
+            <p>Respuesta en 48 horas laborables.</p>
+          </div>
         </div>
-      </section>
-    </>
+        <div className="bg-stone p-5 md:col-span-7 md:p-10">
+          <ContactForm labels={dict.contact.form} />
+        </div>
+      </div>
+    </section>
   );
 }
