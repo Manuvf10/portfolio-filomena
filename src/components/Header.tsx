@@ -11,17 +11,16 @@ type HeaderProps = {
   locale: Locale;
   nav: Record<(typeof navigationItems)[number], string>;
   languageLabel: string;
-  quoteLabel: string;
 };
 
-export function Header({ locale, nav, languageLabel, quoteLabel }: HeaderProps) {
+export function Header({ locale, nav, languageLabel }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-stone/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-stone/95">
       <div className="container-shell flex h-20 items-center justify-between gap-4">
         <Link href={localizedPath(locale)} className="font-serif text-2xl tracking-tight">
-          Filomena
+          Filomena Club
         </Link>
 
         <button className="md:hidden" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobile-nav">
@@ -34,12 +33,6 @@ export function Header({ locale, nav, languageLabel, quoteLabel }: HeaderProps) 
               {nav[item]}
             </Link>
           ))}
-          <Link
-            href={localizedPath(locale, '/contact')}
-            className="border border-ink px-4 py-2 text-xs uppercase tracking-[0.15em] hover:bg-ink hover:text-stone"
-          >
-            {quoteLabel}
-          </Link>
           <LanguageSwitcher locale={locale} label={languageLabel} />
         </nav>
       </div>

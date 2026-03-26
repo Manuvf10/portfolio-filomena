@@ -1,6 +1,6 @@
 export const siteSettings = {
-  name: 'Filomena',
-  legalName: 'Filomena Creative Studio',
+  name: 'Filomena Club',
+  legalName: 'Filomena Club',
   email: 'hola@filomena.studio',
   instagram: 'https://instagram.com/filomena.studio',
   behance: 'https://behance.net/filomena-studio',

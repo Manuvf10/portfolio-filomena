@@ -11,7 +11,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 
   return (
     <>
-      <Header locale={locale} nav={dict.nav} languageLabel={dict.languageLabel} quoteLabel={dict.common.requestQuote} />
+      <Header locale={locale} nav={dict.nav} languageLabel={dict.languageLabel} />
       <main>{children}</main>
       <Footer locale={locale} nav={dict.nav} copy={dict.footer} />
     </>
