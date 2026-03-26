@@ -7,11 +7,11 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://filomena.studio'),
-  title: 'Filomena',
-  description: 'Estudio creativo editorial especializado en branding, contenido y dirección visual.',
+  title: 'Filomena Club',
+  description: 'Dirección creativa editorial, branding y contenido visual para marcas con criterio.',
   openGraph: {
-    title: 'Filomena Creative Studio',
-    description: 'Branding, diseño y contenido para marcas con visión.',
+    title: 'Filomena Club',
+    description: 'Editorial creative direction, branding and visual content.',
     type: 'website'
   },
   icons: {

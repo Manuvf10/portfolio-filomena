@@ -12,25 +12,21 @@ type HeroSectionProps = {
 
 export function HeroSection({ kicker, title, subtitle, quoteHref, quoteLabel, workHref, workLabel }: HeroSectionProps) {
   return (
-    <section className="border-b border-zinc-300 bg-stone py-14 md:py-20">
-      <div className="container-shell grid gap-10 md:grid-cols-12 md:items-end">
-        <div className="md:col-span-8">
-          <p className="text-xs uppercase tracking-[0.24em] text-olive">{kicker}</p>
-          <h1 className="editorial-title mt-5 max-w-5xl text-[2.9rem] leading-[0.92] md:text-8xl">{title}</h1>
-        </div>
-
-        <aside className="space-y-6 border-t border-zinc-300 pt-6 md:col-span-4 md:border-l md:border-t-0 md:pl-7 md:pt-0">
-          <p className="text-base text-zinc-700">{subtitle}</p>
-          <div className="flex flex-wrap gap-3">
-            <Link href={quoteHref} className="bg-ink px-6 py-3 text-xs uppercase tracking-[0.2em] text-stone hover:bg-olive">
+    <section className="border-b border-zinc-200 py-20 md:py-28">
+      <div className="container-shell space-y-8">
+        <p className="text-xs uppercase tracking-[0.22em] text-zinc-500">{kicker}</p>
+        <h1 className="editorial-title max-w-5xl text-5xl leading-[0.94] md:text-8xl">{title}</h1>
+        <div className="flex flex-wrap items-center gap-4 pt-3">
+          <p className="max-w-xl text-base text-zinc-600">{subtitle}</p>
+          <div className="flex gap-3">
+            <Link href={quoteHref} className="border border-ink px-5 py-2 text-xs uppercase tracking-[0.2em] hover:bg-ink hover:text-stone">
               {quoteLabel}
             </Link>
-            <Link href={workHref} className="border border-ink px-6 py-3 text-xs uppercase tracking-[0.2em] hover:bg-ink hover:text-stone">
+            <Link href={workHref} className="text-xs uppercase tracking-[0.2em] text-zinc-600 underline-offset-4 hover:underline">
               {workLabel}
             </Link>
           </div>
-          <p className="text-[11px] uppercase tracking-[0.2em] text-zinc-500">Fashion · Lifestyle · Creative Business</p>
-        </aside>
+        </div>
       </div>
     </section>
   );

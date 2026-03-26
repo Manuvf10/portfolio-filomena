@@ -14,10 +14,10 @@ export function Footer({
   copy: { tagline: string; rights: string; social: string };
 }) {
   return (
-    <footer className="border-t border-zinc-200 bg-mist">
-      <div className="container-shell grid gap-8 py-14 md:grid-cols-3">
+    <footer className="border-t border-zinc-200 bg-white">
+      <div className="container-shell grid gap-10 py-16 md:grid-cols-3">
         <div>
-          <p className="font-serif text-2xl">Filomena</p>
+          <p className="font-serif text-2xl">Filomena Club</p>
           <p className="mt-3 max-w-xs text-sm text-zinc-700">{copy.tagline}</p>
         </div>
         <div>
@@ -31,8 +31,7 @@ export function Footer({
           </ul>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">Contacto</p>
-          <a href={`mailto:${siteSettings.email}`} className="mt-3 block text-sm">
+          <a href={`mailto:${siteSettings.email}`} className="block text-sm">
             {siteSettings.email}
           </a>
           <p className="mt-6 text-xs uppercase tracking-[0.2em] text-zinc-500">{copy.social}</p>

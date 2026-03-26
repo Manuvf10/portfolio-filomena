@@ -20,18 +20,20 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <section className="section-space">
-      <div className="container-shell grid gap-[2px] bg-zinc-300 md:grid-cols-12">
-        <div className="bg-ink p-8 text-stone md:col-span-5 md:p-10">
-          <SectionHeading eyebrow="Filomena" title={dict.nav.contact} description={dict.contact.intro} inverted />
-          <div className="space-y-4 border-t border-stone/20 pt-6 text-sm text-stone/80">
-            <p>
-              {dict.common.contactEmail}: <a className="underline" href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
-            </p>
-            <p>{siteSettings.location}</p>
-            <p>Respuesta en 48 horas laborables.</p>
-          </div>
+      <div className="container-shell grid gap-12 md:grid-cols-12">
+        {/* LAYOUT: Columna editorial de contexto. */}
+        {/* CONTENIDO: Datos directos de contacto y tiempos de respuesta. */}
+        <div className="space-y-6 md:col-span-4">
+          <SectionHeading eyebrow="Filomena Club" title={dict.nav.contact} description={dict.contact.intro} />
+          <p className="text-sm text-zinc-600">
+            {dict.common.contactEmail}: <a className="underline" href={`mailto:${siteSettings.email}`}>{siteSettings.email}</a>
+          </p>
+          <p className="text-sm text-zinc-600">{siteSettings.location}</p>
         </div>
-        <div className="bg-stone p-5 md:col-span-7 md:p-10">
+
+        {/* LAYOUT: Formulario limpio pensado para ser restilizado desde diseños externos. */}
+        {/* CONTENIDO: Etiquetas y mensajes definidos por idioma. */}
+        <div className="md:col-span-8">
           <ContactForm labels={dict.contact.form} />
         </div>
       </div>

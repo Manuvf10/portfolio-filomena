@@ -18,24 +18,13 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
   const dict = getDictionary(locale);
 
   return (
-    <>
-      <section className="border-b border-zinc-300 bg-ink py-16 text-stone md:py-24">
-        <div className="container-shell grid gap-8 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-8">
-            <SectionHeading eyebrow="Filomena Portfolio" title={dict.nav.projects} description={dict.projects.intro} inverted />
-          </div>
-          <div className="space-y-2 border-t border-stone/20 pt-5 text-xs uppercase tracking-[0.2em] text-stone/80 md:col-span-4 md:border-l md:border-t-0 md:pl-6 md:pt-0">
-            <p>Branding</p>
-            <p>Creative Direction</p>
-            <p>Content & Motion</p>
-            <p>Web & Social Design</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-2 pt-2">
+    <section className="section-space">
+      <div className="container-shell space-y-10">
+        {/* LAYOUT: Intro + collage para mantener protagonismo visual de imágenes. */}
+        {/* CONTENIDO: Data y textos desacoplados en content + diccionario. */}
+        <SectionHeading eyebrow="Filomena Club" title={dict.nav.projects} description={dict.projects.intro} />
         <ProjectsGrid content={dict.projects.list} categories={dict.projects.categories} mode="collage" />
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
