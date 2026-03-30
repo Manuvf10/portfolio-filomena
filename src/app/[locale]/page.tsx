@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
-import { HomeMedia } from '@/components/HomeMedia';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { createMetadata } from '@/lib/metadata';
@@ -18,17 +18,39 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <section className="section-space">
-      <div className="container-shell space-y-12 md:space-y-16">
-        <HomeMedia
-          primaryAlt={dict.home.mediaAltPrimary}
-          secondaryAlt={dict.home.mediaAltSecondary}
-          mobileVideoLabel={dict.home.mobileVideoLabel}
-        />
+      <div className="container-shell space-y-10 md:space-y-14">
+        {/* LAYOUT: En desktop se usa imagen estática de referencia para facilitar el reemplazo con diseño final. */}
+        <div className="hidden md:block">
+          <Image
+            src="/images/placeholders/hero-editorial.svg"
+            alt={dict.home.mediaAlt}
+            width={1600}
+            height={980}
+            className="h-auto w-full border border-zinc-200"
+            priority
+          />
+        </div>
 
-        {/* TEXTO EDITABLE: copy principal gestionado desde diccionario ES/EN. */}
+        {/* LAYOUT: En mobile se usa vídeo tal como pide el diseño (ruta fácil de sustituir). */}
+        {/* MEDIA: Reemplazar /videos/home-mobile.mp4 cuando llegue el máster final de cliente. */}
+        <div className="md:hidden">
+          <video
+            className="h-auto w-full border border-zinc-200"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/placeholders/hero-editorial.svg"
+          >
+            <source src="/videos/home-mobile.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* CONTENIDO EDITABLE: Texto principal i18n desde diccionario ES/EN. */}
         <p className="max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">{dict.home.description}</p>
 
-        <p className="editorial-title max-w-5xl text-6xl md:text-8xl">{dict.home.naming}</p>
+        <p className="editorial-title max-w-4xl text-5xl md:text-7xl">{dict.home.naming}</p>
       </div>
     </section>
   );
