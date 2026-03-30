@@ -1,12 +1,8 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
-import { HeroSection } from '@/components/HeroSection';
-import { ProjectsGrid } from '@/components/ProjectsGrid';
-import { SectionHeading } from '@/components/SectionHeading';
-import { ServiceList } from '@/components/ServiceList';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { createMetadata } from '@/lib/metadata';
-import { localizedPath } from '@/lib/routes';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: incomingLocale } = await params;
@@ -21,36 +17,41 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const dict = getDictionary(locale);
 
   return (
-    <>
-      {/* LAYOUT: Hero principal fácil de reemplazar por propuesta externa. */}
-      {/* CONTENIDO: Copys cortos definidos en diccionario. */}
-      <HeroSection
-        kicker={dict.home.heroKicker}
-        title={dict.home.heroTitle}
-        subtitle={dict.home.heroSubtitle}
-        quoteHref={localizedPath(locale, '/contact')}
-        quoteLabel={dict.common.requestQuote}
-        workHref={localizedPath(locale, '/projects')}
-        workLabel={dict.common.exploreWork}
-      />
-
-      {/* LAYOUT: Bloque de servicios minimal con estructura modular. */}
-      {/* CONTENIDO: Listado traducible desde i18n/dictionaries.ts. */}
-      <section className="section-space border-b border-zinc-200">
-        <div className="container-shell space-y-10">
-          <SectionHeading eyebrow={dict.nav.services} title={dict.home.servicesTitle} description={dict.services.intro} />
-          <ServiceList content={dict.services.list} />
+    <section className="section-space">
+      <div className="container-shell space-y-10 md:space-y-14">
+        {/* LAYOUT: En desktop se usa imagen estática de referencia para facilitar el reemplazo con diseño final. */}
+        <div className="hidden md:block">
+          <Image
+            src="/images/placeholders/hero-editorial.svg"
+            alt={dict.home.mediaAlt}
+            width={1600}
+            height={980}
+            className="h-auto w-full border border-zinc-200"
+            priority
+          />
         </div>
-      </section>
 
-      {/* LAYOUT: Galería visual con collage limpio y sin overlays pesados. */}
-      {/* CONTENIDO: Títulos y categorías cargados por diccionario. */}
-      <section className="section-space">
-        <div className="container-shell space-y-10">
-          <SectionHeading eyebrow={dict.nav.projects} title={dict.home.projectsTitle} description={dict.projects.intro} />
-          <ProjectsGrid content={dict.projects.list} categories={dict.projects.categories} mode="compact" />
+        {/* LAYOUT: En mobile se usa vídeo tal como pide el diseño (ruta fácil de sustituir). */}
+        {/* MEDIA: Reemplazar /videos/home-mobile.mp4 cuando llegue el máster final de cliente. */}
+        <div className="md:hidden">
+          <video
+            className="h-auto w-full border border-zinc-200"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/placeholders/hero-editorial.svg"
+          >
+            <source src="/videos/home-mobile.mp4" type="video/mp4" />
+          </video>
         </div>
-      </section>
-    </>
+
+        {/* CONTENIDO EDITABLE: Texto principal i18n desde diccionario ES/EN. */}
+        <p className="max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">{dict.home.description}</p>
+
+        <p className="editorial-title max-w-4xl text-5xl md:text-7xl">{dict.home.naming}</p>
+      </div>
+    </section>
   );
 }
