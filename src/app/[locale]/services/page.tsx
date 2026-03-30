@@ -22,7 +22,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <div className="container-shell space-y-10">
         {/* LAYOUT: Encabezado + lista para poder intercambiar estilo rápidamente. */}
         {/* CONTENIDO: Intro y textos vienen del diccionario. */}
-        <SectionHeading eyebrow="Filomena Club" title={dict.nav.services} description={dict.services.intro} />
+        <SectionHeading eyebrow="Filomena Club Creativo" title={dict.nav.services} description={dict.services.intro} />
         <ServiceList content={dict.services.list} />
       </div>
     </section>

@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: light;
+  --font-inter: "Inter", "Avenir Next", "Helvetica Neue", "Arial", sans-serif;
+  --font-playfair: "Iowan Old Style", "Times New Roman", "Times", serif;
 }
 
 body {

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import { ContactForm } from '@/components/ContactForm';
 import { SectionHeading } from '@/components/SectionHeading';
+import { siteSettings } from '@/content/settings';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { createMetadata } from '@/lib/metadata';
@@ -18,10 +20,9 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
 
   return (
     <section className="section-space">
-      <div className="container-shell space-y-16">
-        {/* LAYOUT: Bloque institucional integrado en Nuestro Club. */}
-        {/* CONTENIDO: Intro institucional integrada dentro de Nuestro Club. */}
-        <SectionHeading eyebrow="Filomena Club" title={dict.nav.club} description={dict.club.intro} />
+      <div className="container-shell space-y-14 md:space-y-16">
+        {/* LAYOUT: Club Filomena integra bloque institucional + bloque de contacto para futuras iteraciones de diseño. */}
+        <SectionHeading eyebrow="Filomena Club Creativo" title={dict.nav.club} description={dict.club.intro} />
         <p className="max-w-3xl text-zinc-700">{dict.club.body}</p>
 
         <div className="grid gap-10 border-t border-zinc-200 pt-10 md:grid-cols-12">
@@ -37,6 +38,23 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="grid gap-10 border-t border-zinc-200 pt-10 md:grid-cols-12">
+          <div className="space-y-4 md:col-span-4">
+            <h2 className="font-serif text-3xl">{dict.club.contactTitle}</h2>
+            <p className="text-sm text-zinc-600">{dict.contact.intro}</p>
+            <p className="text-sm text-zinc-600">
+              {dict.common.contactEmail}:{' '}
+              <a className="underline" href={`mailto:${siteSettings.email}`}>
+                {siteSettings.email}
+              </a>
+            </p>
+            <p className="text-sm text-zinc-600">{siteSettings.location}</p>
+          </div>
+          <div className="md:col-span-8">
+            <ContactForm labels={dict.contact.form} />
+          </div>
         </div>
       </div>
     </section>

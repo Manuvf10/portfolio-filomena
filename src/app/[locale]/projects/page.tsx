@@ -22,7 +22,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
       <div className="container-shell space-y-10">
         {/* LAYOUT: Intro + collage para mantener protagonismo visual de imágenes. */}
         {/* CONTENIDO: Data y textos desacoplados en content + diccionario. */}
-        <SectionHeading eyebrow="Filomena Club" title={dict.nav.projects} description={dict.projects.intro} />
+        <SectionHeading eyebrow="Filomena Club Creativo" title={dict.nav.projects} description={dict.projects.intro} />
         <ProjectsGrid content={dict.projects.list} categories={dict.projects.categories} mode="collage" />
       </div>
     </section>
