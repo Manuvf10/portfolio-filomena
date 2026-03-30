@@ -21,8 +21,7 @@ type Dictionary = {
   home: {
     description: string;
     naming: string;
-    mediaAltPrimary: string;
-    mediaAltSecondary: string;
+    mediaAlt: string;
     servicesTitle: string;
     projectsTitle: string;
   };
@@ -88,8 +87,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       description:
         'Agencia creativa especializada en ofrecer soluciones 360° en diseño y creación de contenido. Acompañamos a marcas y proyectos en todo el proceso, desde la conceptualización hasta la ejecución, combinando estrategia, creatividad y técnica para construir identidades sólidas y experiencias visuales que conectan.',
       naming: 'Filomena Club Creativo',
-      mediaAltPrimary: 'Composición visual principal de Filomena Club Creativo.',
-      mediaAltSecondary: 'Segunda imagen editorial de la home de Filomena Club Creativo.',
+      mediaAlt: 'Composición visual principal de Filomena Club Creativo.',
       servicesTitle: 'Qué hacemos',
       projectsTitle: 'Proyectos'
     },
@@ -176,8 +174,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       description:
         'Creative agency specialized in offering 360° solutions in design and content creation. We support brands and projects through the entire process, from concept to execution, combining strategy, creativity, and technique to build strong identities and visual experiences that connect.',
       naming: 'Filomena Club Creativo',
-      mediaAltPrimary: 'Main visual composition by Filomena Club Creativo.',
-      mediaAltSecondary: 'Secondary editorial home image by Filomena Club Creativo.',
+      mediaAlt: 'Main visual composition by Filomena Club Creativo.',
       servicesTitle: 'What we do',
       projectsTitle: 'Projects'
     },

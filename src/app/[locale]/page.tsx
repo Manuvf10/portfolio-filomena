@@ -18,42 +18,39 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <section className="section-space">
-      <div className="container-shell space-y-12 md:space-y-16">
-        {/* LAYOUT PRINCIPAL DESKTOP: composición editorial de dos imágenes estáticas como en PDF. */}
-        <div className="hidden gap-6 md:grid md:grid-cols-12">
-          <div className="md:col-span-7">
-            <Image
-              src="/images/placeholders/hero-editorial.svg"
-              alt={dict.home.mediaAltPrimary}
-              width={1200}
-              height={1400}
-              className="h-[72vh] min-h-[560px] w-full object-cover"
-              priority
-            />
-          </div>
-          <div className="md:col-span-5">
-            <Image
-              src="/images/projects/project-04.svg"
-              alt={dict.home.mediaAltSecondary}
-              width={900}
-              height={1200}
-              className="h-[72vh] min-h-[560px] w-full object-cover"
-              priority
-            />
-          </div>
+      <div className="container-shell space-y-10 md:space-y-14">
+        {/* LAYOUT: En desktop se usa imagen estática de referencia para facilitar el reemplazo con diseño final. */}
+        <div className="hidden md:block">
+          <Image
+            src="/images/placeholders/hero-editorial.svg"
+            alt={dict.home.mediaAlt}
+            width={1600}
+            height={980}
+            className="h-auto w-full border border-zinc-200"
+            priority
+          />
         </div>
 
-        {/* MEDIA MOBILE: vídeo real de cliente en ruta estable para HOME mobile. */}
+        {/* LAYOUT: En mobile se usa vídeo tal como pide el diseño (ruta fácil de sustituir). */}
+        {/* MEDIA: Reemplazar /videos/home-mobile.mp4 cuando llegue el máster final de cliente. */}
         <div className="md:hidden">
-          <video className="h-auto w-full" autoPlay muted loop playsInline preload="metadata" poster="/images/projects/project-02.svg">
+          <video
+            className="h-auto w-full border border-zinc-200"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/placeholders/hero-editorial.svg"
+          >
             <source src="/videos/home-mobile.mp4" type="video/mp4" />
           </video>
         </div>
 
-        {/* TEXTO EDITABLE: copy principal gestionado desde diccionario ES/EN. */}
+        {/* CONTENIDO EDITABLE: Texto principal i18n desde diccionario ES/EN. */}
         <p className="max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">{dict.home.description}</p>
 
-        <p className="editorial-title max-w-5xl text-6xl md:text-8xl">{dict.home.naming}</p>
+        <p className="editorial-title max-w-4xl text-5xl md:text-7xl">{dict.home.naming}</p>
       </div>
     </section>
   );
