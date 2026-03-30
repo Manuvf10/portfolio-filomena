@@ -31,15 +31,15 @@ export function ProjectCard({
   const blockClass = isCompact ? 'md:col-span-6' : formatClasses[project.format];
 
   return (
-    <article className={`group relative overflow-hidden bg-zinc-100 ${blockClass}`}>
-      <div className={`relative overflow-hidden ${isCompact ? 'aspect-[4/5]' : mediaRatios[project.format === 'text' ? 'square' : project.format]}`}>
+    <article className={`space-y-3 ${blockClass}`}>
+      <div className={`relative overflow-hidden bg-zinc-100 ${isCompact ? 'aspect-[4/5]' : mediaRatios[project.format === 'text' ? 'square' : project.format]}`}>
         {project.media.type === 'image' ? (
           <Image
             src={project.media.src}
             alt={project.media.alt}
             fill
             sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-            className="object-cover transition duration-500 ease-out group-hover:scale-[1.02]"
+            className="object-cover"
           />
         ) : (
           <video className="h-full w-full object-cover" autoPlay muted loop playsInline poster={project.media.poster} aria-label={project.media.alt}>
@@ -48,11 +48,10 @@ export function ProjectCard({
         )}
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-10 p-4 md:p-5">
-        <div className="inline-block bg-white/90 px-3 py-2 backdrop-blur-sm">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">{categoryText}</p>
-          <h3 className="mt-1 font-serif text-2xl leading-tight text-ink">{copy.title}</h3>
-        </div>
+      <div className="space-y-1">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">{categoryText}</p>
+        <h3 className="font-serif text-2xl leading-tight text-ink">{copy.title}</h3>
+        <p className="text-sm text-zinc-600">{copy.description}</p>
       </div>
     </article>
   );
