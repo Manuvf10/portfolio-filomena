@@ -1,3 +1,3 @@
-export type NavigationKey = 'home' | 'services' | 'projects' | 'club' | 'contact';
+export type NavigationKey = 'services' | 'projects' | 'club';
 
-export const navigationItems: NavigationKey[] = ['home', 'services', 'projects', 'club', 'contact'];
+export const navigationItems: NavigationKey[] = ['services', 'projects', 'club'];

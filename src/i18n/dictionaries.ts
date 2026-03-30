@@ -17,11 +17,12 @@ type Dictionary = {
     club: { title: string; description: string };
     contact: { title: string; description: string };
   };
-  nav: Record<'home' | 'services' | 'projects' | 'club' | 'contact', string>;
+  nav: Record<'services' | 'projects' | 'club', string>;
   home: {
-    heroKicker: string;
-    heroTitle: string;
-    heroSubtitle: string;
+    description: string;
+    naming: string;
+    mediaAltPrimary: string;
+    mediaAltSecondary: string;
     servicesTitle: string;
     projectsTitle: string;
   };
@@ -32,6 +33,7 @@ type Dictionary = {
     aboutBodyA: string;
     aboutBodyB: string;
     bullets: string[];
+    contactTitle: string;
   };
   services: {
     intro: string;
@@ -72,27 +74,33 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contactEmail: 'Escríbenos'
     },
     metadata: {
-      home: { title: 'Filomena Club — Dirección creativa editorial', description: 'Dirección creativa, branding y contenido visual para marcas con criterio.' },
-      services: { title: 'Servicios — Filomena Club', description: 'Servicios creativos claros, modulares y orientados a resultado.' },
-      projects: { title: 'Trabajos — Filomena Club', description: 'Selección de proyectos con foco visual editorial.' },
-      club: { title: 'Nuestro Club — Filomena Club', description: 'Quiénes somos y cómo colaboramos desde Filomena Club.' },
-      contact: { title: 'Contacto — Filomena Club', description: 'Cuéntanos tu proyecto y te respondemos con una propuesta clara.' }
+      home: {
+        title: 'Filomena Club Creativo — Home',
+        description: 'Agencia creativa especializada en soluciones 360° en diseño y creación de contenido.'
+      },
+      services: { title: 'Qué hacemos — Filomena Club Creativo', description: 'Servicios creativos conectados para marcas y proyectos.' },
+      projects: { title: 'Proyectos — Filomena Club Creativo', description: 'Selección de proyectos con foco visual editorial.' },
+      club: { title: 'Club Filomena — Filomena Club Creativo', description: 'Introducción, enfoque del club y contacto en una misma página.' },
+      contact: { title: 'Contacto — Filomena Club Creativo', description: 'Filomena Club Creativo.' }
     },
-    nav: { home: 'Inicio', services: 'Servicios', projects: 'Trabajos', club: 'Nuestro Club', contact: 'Contacto' },
+    nav: { services: 'Qué hacemos', projects: 'Proyectos', club: 'Club Filomena' },
     home: {
-      heroKicker: 'Filomena Club',
-      heroTitle: 'Dirección visual para marcas con ambición estética.',
-      heroSubtitle: 'Un estudio creativo editorial. Menos ruido, más criterio.',
-      servicesTitle: 'Servicios',
-      projectsTitle: 'Trabajos seleccionados'
+      description:
+        'Agencia creativa especializada en ofrecer soluciones 360° en diseño y creación de contenido. Acompañamos a marcas y proyectos en todo el proceso, desde la conceptualización hasta la ejecución, combinando estrategia, creatividad y técnica para construir identidades sólidas y experiencias visuales que conectan.',
+      naming: 'Filomena Club Creativo',
+      mediaAltPrimary: 'Composición visual principal de Filomena Club Creativo.',
+      mediaAltSecondary: 'Segunda imagen editorial de la home de Filomena Club Creativo.',
+      servicesTitle: 'Qué hacemos',
+      projectsTitle: 'Proyectos'
     },
     club: {
-      intro: 'Filomena Club es un estudio creativo colaborativo.',
-      body: 'Diseñamos identidades, contenido y sistemas visuales con precisión editorial.',
-      aboutTitle: 'Sobre Filomena Club',
-      aboutBodyA: 'Trabajamos con marcas de moda, belleza y lifestyle que necesitan claridad visual y consistencia.',
-      aboutBodyB: 'Nuestro proceso une estrategia, dirección de arte y ejecución para construir una presencia sólida.',
-      bullets: ['Dirección creativa cercana.', 'Procesos claros y ágiles.', 'Estética premium con foco comercial.']
+      intro: 'Club Filomena reúne la parte institucional y de contacto en un solo espacio.',
+      body: 'Trabajamos junto a marcas y proyectos desde la conceptualización hasta la ejecución, combinando estrategia, creatividad y técnica.',
+      aboutTitle: 'Quiénes somos',
+      aboutBodyA: 'Somos una agencia creativa con enfoque editorial y ejecución integral.',
+      aboutBodyB: 'Nuestro club prioriza procesos claros, criterio visual y relaciones de trabajo cercanas.',
+      bullets: ['Estrategia y dirección creativa.', 'Diseño y contenido en formato 360°.', 'Acompañamiento continuo del proyecto.'],
+      contactTitle: 'Contacto'
     },
     services: {
       intro: 'Servicios conectados para construir una marca coherente.',
@@ -121,7 +129,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         'atelier-norte': { title: 'Atelier Norte', description: 'Sistema visual para firma emergente.', categoryLabel: 'Branding' },
         'lumen-beauty': { title: 'Lumen Beauty', description: 'Contenido de lanzamiento digital.', categoryLabel: 'Contenido' },
         'casa-viva': { title: 'Casa Viva', description: 'Rediseño web de enfoque editorial.', categoryLabel: 'Web' },
-        'origen-studio': { title: 'Origen Studio', description: 'Campaña de narrativa minimal.', categoryLabel: 'Dirección creativa' },
+        'origen-studio': { title: 'Origen', description: 'Campaña de narrativa minimal.', categoryLabel: 'Dirección creativa' },
         'salvia-lab': { title: 'Salvia Lab', description: 'Sistema visual para redes.', categoryLabel: 'Social media' },
         'noir-tailor': { title: 'Noir Tailor', description: 'Retoque premium para lookbook.', categoryLabel: 'Retoque' }
       }
@@ -141,7 +149,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       }
     },
     footer: {
-      tagline: 'Filomena Club — dirección creativa editorial.',
+      tagline: 'Filomena Club Creativo — agencia creativa 360°.',
       rights: 'Todos los derechos reservados.',
       social: 'Redes'
     }
@@ -154,27 +162,33 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contactEmail: 'Email us'
     },
     metadata: {
-      home: { title: 'Filomena Club — Editorial creative direction', description: 'Creative direction, branding and visual content for brands with intent.' },
-      services: { title: 'Services — Filomena Club', description: 'Clear and modular creative services focused on results.' },
-      projects: { title: 'Projects — Filomena Club', description: 'A curated visual selection with editorial sensibility.' },
-      club: { title: 'Our Club — Filomena Club', description: 'Who we are and how we collaborate at Filomena Club.' },
-      contact: { title: 'Contact — Filomena Club', description: 'Share your brief and we will reply with a clear next step.' }
+      home: {
+        title: 'Filomena Club Creativo — Home',
+        description: 'Creative agency specialized in 360° design and content creation solutions.'
+      },
+      services: { title: 'What we do — Filomena Club Creativo', description: 'Connected creative services for brands and projects.' },
+      projects: { title: 'Projects — Filomena Club Creativo', description: 'A curated visual selection with editorial sensibility.' },
+      club: { title: 'Club Filomena — Filomena Club Creativo', description: 'Introduction, club approach, and contact in one page.' },
+      contact: { title: 'Contact — Filomena Club Creativo', description: 'Filomena Club Creativo.' }
     },
-    nav: { home: 'Home', services: 'Services', projects: 'Projects', club: 'Our Club', contact: 'Contact' },
+    nav: { services: 'What we do', projects: 'Projects', club: 'Club Filomena' },
     home: {
-      heroKicker: 'Filomena Club',
-      heroTitle: 'Visual direction for brands with aesthetic ambition.',
-      heroSubtitle: 'An editorial creative studio. Less noise, more intention.',
-      servicesTitle: 'Services',
-      projectsTitle: 'Selected work'
+      description:
+        'Creative agency specialized in offering 360° solutions in design and content creation. We support brands and projects through the entire process, from concept to execution, combining strategy, creativity, and technique to build strong identities and visual experiences that connect.',
+      naming: 'Filomena Club Creativo',
+      mediaAltPrimary: 'Main visual composition by Filomena Club Creativo.',
+      mediaAltSecondary: 'Secondary editorial home image by Filomena Club Creativo.',
+      servicesTitle: 'What we do',
+      projectsTitle: 'Projects'
     },
     club: {
-      intro: 'Filomena Club is a collaborative creative studio.',
-      body: 'We shape identities, content and visual systems with editorial precision.',
-      aboutTitle: 'About Filomena Club',
-      aboutBodyA: 'We partner with fashion, beauty and lifestyle brands seeking visual clarity and consistency.',
-      aboutBodyB: 'Our process combines strategy, art direction and execution to build a strong presence.',
-      bullets: ['Close creative direction.', 'Clear and agile workflows.', 'Premium aesthetics with commercial focus.']
+      intro: 'Club Filomena brings institutional content and contact into one clear page.',
+      body: 'We partner with brands and projects from concept to execution, combining strategy, creativity, and technical craft.',
+      aboutTitle: 'Who we are',
+      aboutBodyA: 'We are a creative agency with editorial sensibility and end-to-end execution.',
+      aboutBodyB: 'Our club values clear processes, visual criteria, and close collaboration.',
+      bullets: ['Strategy and creative direction.', '360° design and content.', 'Continuous project support.'],
+      contactTitle: 'Contact'
     },
     services: {
       intro: 'Connected services to build a coherent brand system.',
@@ -203,7 +217,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         'atelier-norte': { title: 'Atelier Norte', description: 'Visual system for an emerging label.', categoryLabel: 'Branding' },
         'lumen-beauty': { title: 'Lumen Beauty', description: 'Digital launch content.', categoryLabel: 'Content' },
         'casa-viva': { title: 'Casa Viva', description: 'Editorial-led web redesign.', categoryLabel: 'Web' },
-        'origen-studio': { title: 'Origen Studio', description: 'Minimal narrative campaign.', categoryLabel: 'Creative direction' },
+        'origen-studio': { title: 'Origen', description: 'Minimal narrative campaign.', categoryLabel: 'Creative direction' },
         'salvia-lab': { title: 'Salvia Lab', description: 'Social visual system.', categoryLabel: 'Social media' },
         'noir-tailor': { title: 'Noir Tailor', description: 'Premium lookbook retouching.', categoryLabel: 'Retouching' }
       }
@@ -223,7 +237,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       }
     },
     footer: {
-      tagline: 'Filomena Club — editorial creative direction.',
+      tagline: 'Filomena Club Creativo — 360° creative agency.',
       rights: 'All rights reserved.',
       social: 'Social'
     }

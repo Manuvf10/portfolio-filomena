@@ -10,48 +10,57 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 type HeaderProps = {
   locale: Locale;
   nav: Record<(typeof navigationItems)[number], string>;
-  languageLabel: string;
 };
 
-export function Header({ locale, nav, languageLabel }: HeaderProps) {
+export function Header({ locale, nav }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-stone/95">
-      <div className="container-shell flex h-20 items-center justify-between gap-4">
+    <header className="border-b border-zinc-200 bg-stone/95">
+      <div className="container-shell grid h-20 grid-cols-[1fr_auto] items-center md:grid-cols-3">
         <Link href={localizedPath(locale)} className="font-serif text-2xl tracking-tight">
-          Filomena Club
+          Filomena Club Creativo
         </Link>
 
-        <button className="md:hidden" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobile-nav">
-          Menú
-        </button>
+        <div className="hidden justify-center md:flex">
+          <nav className="flex items-center gap-8" aria-label="Primary navigation">
+            {navigationItems.map((item) => (
+              <Link key={item} href={localizedPath(locale, `/${item}`)} className="text-sm text-zinc-700 hover:text-ink">
+                {nav[item]}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
-          {navigationItems.map((item) => (
-            <Link key={item} href={localizedPath(locale, item === 'home' ? '' : `/${item}`)} className="text-sm text-zinc-700 hover:text-ink">
-              {nav[item]}
-            </Link>
-          ))}
-          <LanguageSwitcher locale={locale} label={languageLabel} />
-        </nav>
+        <div className="hidden justify-end md:flex">
+          <LanguageSwitcher locale={locale} className="text-xs uppercase tracking-[0.24em]" />
+        </div>
+
+        <button
+          className="justify-self-end text-sm md:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+        >
+          {open ? 'Cerrar' : 'Menú'}
+        </button>
       </div>
 
       <div id="mobile-nav" className={`${open ? 'block' : 'hidden'} border-t border-zinc-200 bg-stone md:hidden`}>
-        <nav className="container-shell flex flex-col py-4">
-          {navigationItems.map((item) => (
-            <Link
-              key={item}
-              href={localizedPath(locale, item === 'home' ? '' : `/${item}`)}
-              className="py-2 text-sm"
-              onClick={() => setOpen(false)}
-            >
-              {nav[item]}
-            </Link>
-          ))}
-          <div className="pt-3">
-            <LanguageSwitcher locale={locale} label={languageLabel} />
+        <nav className="container-shell flex min-h-[58vh] flex-col justify-between py-8" aria-label="Mobile navigation">
+          <div className="space-y-4">
+            {navigationItems.map((item) => (
+              <Link
+                key={item}
+                href={localizedPath(locale, `/${item}`)}
+                className="block py-1 text-2xl font-medium"
+                onClick={() => setOpen(false)}
+              >
+                {nav[item]}
+              </Link>
+            ))}
           </div>
+          <LanguageSwitcher locale={locale} className="pt-10 text-xs uppercase tracking-[0.24em]" />
         </nav>
       </div>
     </header>
