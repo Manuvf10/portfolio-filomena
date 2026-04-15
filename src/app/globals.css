@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Ahsing';
+  src: url('/fonts/ahsing.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --font-inter: "Inter", "Avenir Next", "Helvetica Neue", "Arial", sans-serif;
@@ -9,7 +17,12 @@
 }
 
 body {
+  font-family: 'Ahsing', serif;
   @apply bg-stone text-ink antialiased;
+}
+
+.font-serif {
+  font-family: 'Ahsing', serif;
 }
 
 a {
@@ -25,11 +38,19 @@ a {
 }
 
 .editorial-title {
-  @apply font-serif leading-[0.93] tracking-[-0.02em];
+  font-family: 'Ahsing', serif;
+  @apply leading-[0.93] tracking-[-0.02em];
 }
 
 .section-space {
   @apply py-14 md:py-20;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: 'Ahsing', serif;
 }
 
 @keyframes marquee {
