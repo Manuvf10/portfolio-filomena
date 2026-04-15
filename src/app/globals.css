@@ -12,12 +12,11 @@
 
 :root {
   color-scheme: light;
-  --font-inter: "Inter", "Avenir Next", "Helvetica Neue", "Arial", sans-serif;
-  --font-playfair: "Iowan Old Style", "Times New Roman", "Times", serif;
+  --font-sans: 'Ahsing', serif;
 }
 
 body {
-  font-family: 'Ahsing', serif;
+  font-family: var(--font-sans);
   @apply bg-stone text-ink antialiased;
 }
 
@@ -35,11 +34,6 @@ a {
 
 .container-shell {
   @apply mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-10;
-}
-
-.editorial-title {
-  font-family: 'Ahsing', serif;
-  @apply leading-[0.93] tracking-[-0.02em];
 }
 
 .section-space {
