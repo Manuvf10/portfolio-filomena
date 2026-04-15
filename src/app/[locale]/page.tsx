@@ -22,7 +22,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <HomeMedia
           primaryAlt={dict.home.mediaAlt}
           secondaryAlt={dict.home.mediaAlt}
-          mobileVideoLabel={dict.home.mobileVideoLabel}
+          mobileVideoLabel="Vídeo principal de la home"
         />
 
         <p className="max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">

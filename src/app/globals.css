@@ -15,6 +15,12 @@
   --font-sans: 'Ahsing', serif;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   @apply bg-stone text-ink antialiased;
@@ -22,6 +28,11 @@ body {
 
 .font-serif {
   font-family: 'Ahsing', serif;
+}
+
+.editorial-title {
+  font-family: 'Ahsing', serif;
+  @apply leading-[0.93] tracking-[-0.02em];
 }
 
 a {
@@ -33,11 +44,15 @@ a {
 }
 
 .container-shell {
-  @apply mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-10;
+  @apply mx-auto w-full max-w-[90rem] px-6 md:px-10;
 }
 
 .section-space {
   @apply py-14 md:py-20;
+}
+
+section {
+  width: 100%;
 }
 
 input,

@@ -119,18 +119,42 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contactTitle: 'Contacto'
     },
     services: {
-      intro: 'Servicios conectados para construir una marca coherente.',
-      list: {
-        'photo-retouching': { title: 'Retoque', description: 'Piel, color y luz para campañas y e-commerce.' },
-        'content-creation': { title: 'Contenido', description: 'Concepto y producción de piezas para digital.' },
-        'video-editing': { title: 'Vídeo', description: 'Edición breve y elegante para marca.' },
-        'creative-direction': { title: 'Dirección creativa', description: 'Criterio visual y supervisión estética.' },
-        'graphic-design': { title: 'Diseño gráfico', description: 'Piezas editoriales y de comunicación.' },
-        'web-design': { title: 'Diseño web', description: 'Interfaces limpias y funcionales.' },
-        'social-media-design': { title: 'Social media', description: 'Sistema visual adaptable para redes.' },
-        branding: { title: 'Branding', description: 'Estrategia e identidad visual con carácter.' }
-      }
+  intro: 'Qué hacemos como agencia creativa.',
+  list: {
+    'photo-retouching': {
+      title: 'Retoque fotográfico',
+      description: 'Perfeccionamos imágenes con un acabado limpio, preciso y listo para su uso digital.'
     },
+    'content-creation': {
+      title: 'Contenido y vídeo',
+      description: 'Ideamos, producimos y editamos contenido pensado para conectar en entornos digitales.'
+    },
+    'video-editing': {
+      title: 'Vídeo',
+      description: 'Editamos piezas breves con ritmo, criterio visual y coherencia de marca.'
+    },
+    'creative-direction': {
+      title: 'Dirección creativa',
+      description: 'Definimos conceptos y narrativas que guían el sentido visual de cada proyecto.'
+    },
+    'graphic-design': {
+      title: 'Diseño gráfico',
+      description: 'Creamos piezas y sistemas visuales que ordenan y refuerzan la comunicación.'
+    },
+    'web-design': {
+      title: 'Diseño web',
+      description: 'Diseñamos interfaces claras, funcionales y alineadas con la identidad de marca.'
+    },
+    'social-media-design': {
+      title: 'Redes sociales',
+      description: 'Construimos piezas y sistemas visuales que aportan consistencia y presencia digital.'
+    },
+    branding: {
+      title: 'Branding',
+      description: 'Construimos identidades visuales sólidas, coherentes y reconocibles.'
+    }
+  }
+},
     projects: {
       intro: 'Una galería curada de branding, contenido y diseño.',
       categories: {
@@ -243,16 +267,40 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contactTitle: 'Contact'
     },
     services: {
-      intro: 'Connected services to build a coherent brand system.',
+      intro: 'What we do as a creative agency.',
       list: {
-        'photo-retouching': { title: 'Retouching', description: 'Skin, color and light for campaigns and e-commerce.' },
-        'content-creation': { title: 'Content', description: 'Concept and production for digital assets.' },
-        'video-editing': { title: 'Video', description: 'Short-form edits with elegant rhythm.' },
-        'creative-direction': { title: 'Creative direction', description: 'Visual criteria and art supervision.' },
-        'graphic-design': { title: 'Graphic design', description: 'Editorial and communication pieces.' },
-        'web-design': { title: 'Web design', description: 'Clean interfaces with strong structure.' },
-        'social-media-design': { title: 'Social media', description: 'Adaptable visual systems for channels.' },
-        branding: { title: 'Branding', description: 'Strategy and visual identity with character.' }
+        'photo-retouching': {
+          title: 'Photo retouching',
+          description: 'We refine imagery with a clean, precise finish ready for digital use.'
+        },
+        'content-creation': {
+          title: 'Content & video',
+          description: 'We develop, produce and edit content designed to connect across digital environments.'
+        },
+        'video-editing': {
+          title: 'Video',
+          description: 'We edit short-form pieces with rhythm, visual criteria and brand coherence.'
+        },
+        'creative-direction': {
+          title: 'Creative direction',
+          description: 'We define concepts and narratives that guide the visual meaning of each project.'
+        },
+        'graphic-design': {
+          title: 'Graphic design',
+          description: 'We create pieces and visual systems that organize and strengthen communication.'
+        },
+        'web-design': {
+          title: 'Web design',
+          description: 'We design clear, functional interfaces aligned with the brand identity.'
+        },
+        'social-media-design': {
+          title: 'Social media',
+          description: 'We build pieces and visual systems that bring consistency and digital presence.'
+        },
+        branding: {
+          title: 'Branding',
+          description: 'We build strong, coherent and recognizable visual identities.'
+        }
       }
     },
     projects: {
