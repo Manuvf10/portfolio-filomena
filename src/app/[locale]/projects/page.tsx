@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ProjectsGrid } from '@/components/ProjectsGrid';
-import { SectionHeading } from '@/components/SectionHeading';
+import { ProjectsCollage } from '@/components/ProjectsCollage';
 import { defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { createMetadata } from '@/lib/metadata';
@@ -19,11 +18,11 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
 
   return (
     <section className="section-space">
-      <div className="container-shell space-y-10">
-        {/* LAYOUT: Intro + collage para mantener protagonismo visual de imágenes. */}
-        {/* CONTENIDO: Data y textos desacoplados en content + diccionario. */}
-        <SectionHeading eyebrow="Filomena Club Creativo" title={dict.nav.projects} description={dict.projects.intro} />
-        <ProjectsGrid content={dict.projects.list} categories={dict.projects.categories} mode="collage" />
+      <div className="container-shell space-y-6 md:space-y-8">
+        <div className="flex justify-end">
+          <h1 className="font-serif text-4xl leading-none text-ink md:text-6xl">{dict.nav.projects}</h1>
+        </div>
+        <ProjectsCollage />
       </div>
     </section>
   );
