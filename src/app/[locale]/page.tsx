@@ -17,21 +17,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const dict = getDictionary(locale);
 
   return (
-    <section className="section-space">
-      <div className="container-shell space-y-10 md:space-y-14">
-        <HomeMedia
-          primaryAlt={dict.home.mediaAlt}
-          secondaryAlt={dict.home.mediaAlt}
-          mobileVideoLabel="Vídeo principal de la home"
-        />
+    <section className="bg-white">
+      <HomeMedia
+        primaryAlt={dict.home.mediaAlt}
+        secondaryAlt={dict.home.mediaAlt}
+        mobileVideoLabel="Vídeo principal de la home"
+      />
 
-        <p className="max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">
-          {dict.home.description}
-        </p>
+      <div className="px-6 pt-10 md:px-10 md:pt-12">
+        <p className="max-w-[520px] text-[13px] leading-[1.25] text-zinc-700">{dict.home.description}</p>
+      </div>
 
-        <p className="editorial-title max-w-4xl text-5xl md:text-7xl">
-          {dict.home.naming}
-        </p>
+      <div className="px-6 pb-8 pt-20 md:px-10 md:pb-8 md:pt-28">
+        <h1 className="text-[42px] leading-none text-ink md:text-[56px]">{dict.home.naming}©</h1>
       </div>
     </section>
   );

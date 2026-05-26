@@ -32,35 +32,20 @@ export function HomeMedia({
 
   return (
     <>
-      {/* LAYOUT DESKTOP: composición fija con dos imágenes estáticas, alineadas y con mucho aire. */}
-      <div className="hidden gap-6 md:grid md:grid-cols-12">
-        <div className="md:col-span-7">
-          <Image
-            src="/images/placeholders/hero-editorial.svg"
-            alt={primaryAlt}
-            width={1200}
-            height={1400}
-            className="h-[72vh] min-h-[560px] w-full object-cover"
-            priority
-          />
+      <div className="hidden h-[280px] w-full bg-[#E1E1E1] md:grid md:grid-cols-[1fr_220px_220px]">
+        <div />
+        <div className="relative h-full w-full">
+          <Image src="/images/home/desktop-left.jpg" alt={primaryAlt} fill className="h-full w-full object-cover" priority />
         </div>
-        <div className="md:col-span-5">
-          <Image
-            src="/images/projects/project-06.svg"
-            alt={secondaryAlt}
-            width={900}
-            height={1200}
-            className="h-[72vh] min-h-[560px] w-full object-cover"
-            priority
-          />
+        <div className="relative h-full w-full">
+          <Image src="/images/home/desktop-right.jpg" alt={secondaryAlt} fill className="h-full w-full object-cover" priority />
         </div>
       </div>
 
-      {/* MEDIA MOBILE: vídeo real de cliente. Sin poster para priorizar percepción de movimiento. */}
       <div className="md:hidden">
         <video
           ref={mobileVideoRef}
-          className="aspect-[4/5] w-full object-cover"
+          className="w-full object-cover"
           autoPlay
           muted
           loop

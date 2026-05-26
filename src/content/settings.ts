@@ -6,3 +6,10 @@ export const siteSettings = {
   behance: 'https://behance.net/filomenaclub',
   location: 'Madrid · Remoto internacional'
 };
+
+export const mediaSettings = {
+  homeDesktopPrimary: '/images/home/desktop-left.jpg',
+  homeDesktopSecondary: '/images/home/desktop-right.jpg',
+  clubHero: '/images/club/hero.jpg',
+  clubHeroAlt: 'Imagen principal de Club Filomena'
+};

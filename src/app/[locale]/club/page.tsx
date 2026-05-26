@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
 import { SectionHeading } from '@/components/SectionHeading';
 import { siteSettings } from '@/content/settings';
@@ -20,10 +21,23 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
 
   return (
     <section className="section-space">
-      <div className="container-shell space-y-14 md:space-y-16">
-        {/* LAYOUT: Club Filomena integra bloque institucional + bloque de contacto para futuras iteraciones de diseño. */}
-        <SectionHeading eyebrow="Filomena Club Creativo" title={dict.nav.club} description={dict.club.intro} />
-        <p className="max-w-3xl text-zinc-700">{dict.club.body}</p>
+      <div className="container-shell space-y-10 md:space-y-14">
+        <div className="grid gap-0 border-b border-zinc-200 pb-8 md:grid-cols-12">
+          <div className="md:col-span-6">
+            <Image
+              src="/images/club/hero.jpg"
+              alt="Imagen principal de Club Filomena"
+              width={1000}
+              height={1200}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
+          <div className="space-y-6 bg-white p-6 md:col-span-6 md:p-10">
+            <SectionHeading eyebrow="Filomena Club Creativo" title={dict.nav.club} description={dict.club.intro} />
+            <p className="text-sm leading-relaxed text-zinc-700">{dict.club.body}</p>
+          </div>
+        </div>
 
         <div className="grid gap-10 border-t border-zinc-200 pt-10 md:grid-cols-12">
           <div className="space-y-4 md:col-span-7">
