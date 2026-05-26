@@ -5,11 +5,9 @@ import { useEffect, useRef } from 'react';
 
 export function HomeMedia({
   primaryAlt,
-  secondaryAlt,
   mobileVideoLabel
 }: {
   primaryAlt: string;
-  secondaryAlt: string;
   mobileVideoLabel: string;
 }) {
   const mobileVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -19,44 +17,26 @@ export function HomeMedia({
     if (!video) return;
 
     video.muted = true;
-    const startPlayback = async () => {
-      try {
-        await video.play();
-      } catch {
-        // Si el navegador bloquea autoplay, el vídeo sigue visible en primer frame sin romper layout.
-      }
-    };
-
-    void startPlayback();
+    void video.play().catch(() => {});
   }, []);
 
   return (
     <>
-      {/* LAYOUT DESKTOP: composición fija con dos imágenes estáticas, alineadas y con mucho aire. */}
-      <div className="hidden gap-6 md:grid md:grid-cols-12">
-        <div className="md:col-span-7">
+      <div className="hidden bg-[#E1E1E1] md:block">
+        <div className="container-shell grid h-[280px] grid-cols-[1fr_minmax(430px,460px)]">
+          <div />
+
           <Image
-            src="/images/placeholders/hero-editorial.svg"
+            src="/images/home/desktop-left.jpg"
             alt={primaryAlt}
-            width={1200}
-            height={1400}
-            className="h-[72vh] min-h-[560px] w-full object-cover"
-            priority
-          />
-        </div>
-        <div className="md:col-span-5">
-          <Image
-            src="/images/projects/project-06.svg"
-            alt={secondaryAlt}
-            width={900}
-            height={1200}
-            className="h-[72vh] min-h-[560px] w-full object-cover"
+            width={920}
+            height={560}
+            className="h-full w-full object-cover"
             priority
           />
         </div>
       </div>
 
-      {/* MEDIA MOBILE: vídeo real de cliente. Sin poster para priorizar percepción de movimiento. */}
       <div className="md:hidden">
         <video
           ref={mobileVideoRef}

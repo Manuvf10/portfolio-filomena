@@ -17,8 +17,8 @@ export function Header({ locale, nav }: HeaderProps) {
 
   return (
     <header className="border-b border-zinc-200 bg-stone/95">
-      <div className="container-shell flex h-20 items-center justify-between gap-4">
-        <Link href={localizedPath(locale)} className="font-serif text-2xl tracking-tight">
+      <div className="container-shell flex h-20 items-center justify-between gap-5 md:grid md:grid-cols-[1fr_auto_1fr]">
+        <Link href={localizedPath(locale)} className="font-serif text-[28px] leading-none tracking-tight">
           Filomena Club Creativo
         </Link>
 
@@ -31,14 +31,19 @@ export function Header({ locale, nav }: HeaderProps) {
           {open ? 'Cerrar' : 'Menú'}
         </button>
 
-        <div className="hidden items-center gap-10 md:flex">
-          <nav className="flex items-center gap-8" aria-label="Primary navigation">
-            {navigationItems.map((item) => (
-              <Link key={item} href={localizedPath(locale, `/${item}`)} className="text-sm text-zinc-700 hover:text-ink">
-                {nav[item]}
-              </Link>
-            ))}
-          </nav>
+        <nav className="hidden items-center gap-12 justify-self-center md:flex" aria-label="Primary navigation">
+          {navigationItems.map((item) => (
+            <Link
+              key={item}
+              href={localizedPath(locale, `/${item}`)}
+              className={`text-[17px] text-zinc-700 hover:text-ink ${item === 'club' ? 'font-semibold' : ''}`}
+            >
+              {nav[item]}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden justify-self-end md:flex">
           <LanguageSwitcher locale={locale} className="text-xs uppercase tracking-[0.24em]" />
         </div>
       </div>

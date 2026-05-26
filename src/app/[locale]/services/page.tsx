@@ -39,7 +39,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   ];
 
   return (
-    <section className="bg-stone pt-10 pb-8 md:pt-12 md:pb-10">
+    <section className="bg-white pt-10 pb-8 md:pt-12 md:pb-10">
       <div className="mx-auto w-full max-w-[1600px] px-8 md:px-12">
         <div className="mx-auto max-w-[1320px]">
           <div className="space-y-12 md:space-y-16">

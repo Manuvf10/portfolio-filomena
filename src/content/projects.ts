@@ -8,7 +8,7 @@ export type ProjectItem = {
 };
 
 export const projects: ProjectItem[] = Array.from({ length: 41 }, (_, index) => {
-  const id = index + 1;
+  const id = 41 - index;
 
   return {
     id,

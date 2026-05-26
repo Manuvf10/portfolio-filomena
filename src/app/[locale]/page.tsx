@@ -17,21 +17,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const dict = getDictionary(locale);
 
   return (
-    <section className="section-space">
-      <div className="container-shell space-y-10 md:space-y-14">
-        <HomeMedia
-          primaryAlt={dict.home.mediaAlt}
-          secondaryAlt={dict.home.mediaAlt}
-          mobileVideoLabel="Vídeo principal de la home"
-        />
+    <section className="bg-white">
+      <HomeMedia
+        primaryAlt={dict.home.mediaAlt}
+        mobileVideoLabel={dict.home.mobileVideoLabel}
+      />
 
-        <p className="max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">
+      <div className="container-shell pt-12 md:pt-14">
+        <p className="max-w-[620px] text-[15px] leading-[1.35] text-black md:text-[16px]">
           {dict.home.description}
         </p>
+      </div>
 
-        <p className="editorial-title max-w-4xl text-5xl md:text-7xl">
-          {dict.home.naming}
-        </p>
+      <div className="container-shell pb-16 pt-24 md:pb-24 md:pt-32">
+        <h1 className="text-[48px] leading-none text-black md:text-[68px]">
+          Filomena Club Creativo©
+        </h1>
       </div>
     </section>
   );

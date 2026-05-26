@@ -20,7 +20,7 @@ export function ProjectsCollage() {
                 fill
                 sizes="(max-width: 768px) 33vw, 16vw"
                 className="object-cover"
-                priority={project.id <= 12}
+                priority={project.id > projects.length - 12}
               />
               <div className={`absolute inset-0 ${overlayClass}`} />
               <div className="absolute inset-x-0 bottom-0 p-2 md:p-2.5">
