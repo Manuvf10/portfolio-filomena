@@ -20,7 +20,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
     <section className="section-space">
       <div className="container-shell space-y-6 md:space-y-8">
         <div className="flex justify-end">
-          <h1 className="font-serif text-4xl leading-none text-ink md:text-6xl">{dict.nav.projects}</h1>
+          <h1 className="font-sans text-4xl font-medium leading-none text-ink md:text-6xl">{dict.nav.projects}</h1>
         </div>
         <ProjectsCollage />
       </div>

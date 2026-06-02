@@ -18,7 +18,7 @@ export function Header({ locale, nav }: HeaderProps) {
   return (
     <header className="border-b border-zinc-200 bg-stone/95">
       <div className="container-shell flex h-20 items-center justify-between gap-5 md:grid md:grid-cols-[1fr_auto_1fr]">
-        <Link href={localizedPath(locale)} className="font-serif text-[28px] leading-none tracking-tight">
+        <Link href={localizedPath(locale)} className="font-sans text-[18px] font-medium leading-none tracking-tight">
           Filomena Club Creativo
         </Link>
 
@@ -36,7 +36,7 @@ export function Header({ locale, nav }: HeaderProps) {
             <Link
               key={item}
               href={localizedPath(locale, `/${item}`)}
-              className={`text-[17px] text-zinc-700 hover:text-ink ${item === 'club' ? 'font-semibold' : ''}`}
+              className={`font-sans text-[17px] text-zinc-700 hover:text-ink ${item === 'club' ? 'font-semibold' : ''}`}
             >
               {nav[item]}
             </Link>
@@ -55,7 +55,7 @@ export function Header({ locale, nav }: HeaderProps) {
               <Link
                 key={item}
                 href={localizedPath(locale, `/${item}`)}
-                className="block py-1 text-xl font-medium"
+                className="block py-1 font-sans text-xl font-medium"
                 onClick={() => setOpen(false)}
               >
                 {nav[item]}

@@ -98,7 +98,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: { services: 'Qué hacemos', projects: 'Proyectos', club: 'Club Filomena' },
     home: {
       description:
-        'Agencia creativa especializada en ofrecer soluciones 360° en diseño y creación de contenido. Acompañamos a marcas y proyectos en todo el proceso, desde la conceptualización hasta la ejecución, combinando estrategia, creatividad y técnica para construir identidades sólidas y experiencias visuales que conectan.',
+        'Somos una agencia creativa especializada en ofrecer soluciones 360° en diseño y creación de contenido. Acompañamos a marcas y proyectos en todo el proceso, desde la conceptualización hasta la ejecución, combinando estrategia, creatividad y técnica para construir identidades sólidas y experiencias visuales que conectan.',
       naming: 'Filomena Club Creativo',
       mediaAlt: 'Composición visual principal de Filomena Club Creativo.',
       mobileVideoLabel: 'Vídeo principal de la home de Filomena Club Creativo.',
@@ -135,11 +135,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     'creative-direction': {
       title: 'Dirección creativa',
-      description: 'Definimos conceptos y narrativas que guían el sentido visual de cada proyecto.'
+      description: 'Definimos conceptos y narrativas que guían y dan sentido a cada proyecto.'
     },
     'graphic-design': {
       title: 'Diseño gráfico',
-      description: 'Creamos piezas y sistemas visuales que ordenan y refuerzan la comunicación.'
+      description: 'Nos adaptamos a cada proyecto. Si lo necesitas, lo hacemos.'
     },
     'web-design': {
       title: 'Diseño web',
@@ -147,7 +147,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     'social-media-design': {
       title: 'Redes sociales',
-      description: 'Construimos piezas y sistemas visuales que aportan consistencia y presencia digital.'
+      description: 'Creamos piezas y sistemas visuales que aportan coherencia y personalidad a tu presencia digital.'
     },
     branding: {
       title: 'Branding',

@@ -13,7 +13,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans: ['var(--font-inter)', 'sans-serif']
+        sans: ['var(--font-sans)']
       },
       boxShadow: {
         soft: '0 8px 30px rgba(0,0,0,0.06)'

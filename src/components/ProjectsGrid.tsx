@@ -3,8 +3,8 @@ import { ProjectCard } from './ProjectCard';
 
 export function ProjectsGrid() {
   return (
-    <div className="grid grid-cols-3 gap-1 md:grid-cols-6">
-      {projects.map((project) => (
+    <div className="grid grid-cols-3 md:grid-cols-6">
+      {projects.filter((project) => project.visible !== false).map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}
     </div>

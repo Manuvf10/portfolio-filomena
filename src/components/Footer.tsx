@@ -14,10 +14,10 @@ export function Footer({
   copy: { tagline: string; rights: string; social: string };
 }) {
   return (
-    <footer className="border-t border-zinc-200 bg-stone">
+    <footer className="border-t border-zinc-200 bg-stone font-sans">
       <div className="container-shell grid gap-8 py-12 md:grid-cols-3 md:py-16">
         <div>
-          <p className="font-serif text-2xl">Filomena Club Creativo</p>
+          <p className="text-2xl font-medium">Filomena Club Creativo</p>
           <p className="mt-3 max-w-xs text-sm text-zinc-600">{copy.tagline}</p>
         </div>
         <div className="space-y-2 text-sm text-zinc-700">
@@ -32,8 +32,8 @@ export function Footer({
             {siteSettings.email}
           </a>
           <div className="flex gap-4 text-zinc-700">
-            <a href={siteSettings.instagram} target="_blank" rel="noreferrer">
-              Instagram
+            <a href={siteSettings.instagram} target="_blank" rel="noopener noreferrer">
+              @club.filomena
             </a>
             <a href={siteSettings.behance} target="_blank" rel="noreferrer">
               Behance

@@ -20,11 +20,13 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
   const paragraphs = isSpanish
     ? [
         'Somos gente que hace cosas.',
-        'Club es nuestro punto de encuentro: un espacio donde creativos de distintas disciplinas se juntan para crecer, colaborar y darle forma a ideas que merecen la pena.',
-        'Nos movemos por intuición, criterio y ganas. Nos gusta trabajar con personas que tienen algo que decir y saben cómo hacerlo.',
+        'Club es nuestro punto de encuentro: un espacio donde creativos de distintas disciplinas se juntan para crear, colaborar y darle forma a ideas que merecen la pena.',
+        'Nos movemos por intuición, criterio y ganas.',
+        'Nos gusta trabajar con personas que tienen algo que decir y saben cómo hacerlo.',
         'Cada proyecto es una oportunidad para conectar perfiles distintos y construir algo sólido.',
         'Si esto te suena, estás dentro.',
-        'Únete al Club rellenando el formulario y cuéntanos quién eres. Contactamos contigo para los próximos proyectos que vayan surgiendo.'
+        'Únete al Club rellenando el formulario y cuéntanos quién eres.',
+        'Contamos contigo para los próximos proyectos que vayan surgiendo.'
       ]
     : [
         'We are people who make things.',
@@ -75,7 +77,7 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
           </div>
 
           <div className="flex flex-col justify-end pb-10 pt-10 md:pb-16 md:pl-16 md:pt-24">
-            <h1 className="mb-12 text-right text-[34px] leading-none md:mb-16 md:text-[42px]">
+            <h1 className="mb-12 text-right font-sans text-[34px] font-normal leading-none md:mb-16 md:text-[42px]">
               {isSpanish ? 'El Club' : 'The Club'}
             </h1>
 
@@ -90,7 +92,7 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
         <ClubSignupForm labels={formLabels} />
 
         <div className="pb-8 pt-24 md:pb-10 md:pt-32">
-          <p className="text-[42px] leading-none text-black md:text-[56px]">Filomena Club Creativo*</p>
+          <p className="font-sans text-[42px] font-normal leading-none text-black md:text-[56px]">Filomena Club Creativo©</p>
         </div>
       </div>
     </section>

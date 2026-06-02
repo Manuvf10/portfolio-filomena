@@ -55,7 +55,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           </div>
 
             <div className="max-w-[560px]">
-              <h1 className="text-[4.2rem] leading-[0.94] tracking-[-0.03em] md:text-[4.35rem]">
+              <h1 className="font-sans text-[4.2rem] font-normal leading-[0.94] tracking-[-0.03em] md:text-[4.35rem]">
                 {locale === 'es' ? 'Qué hacemos como agencia creativa' : 'What we do as a creative agency'}
               </h1>
             </div>
