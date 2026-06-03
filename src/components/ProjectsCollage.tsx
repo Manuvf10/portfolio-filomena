@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { projects } from '@/content/projects';
 
 export function ProjectsCollage() {
-  const visibleProjects = projects.filter((project) => project.visible !== false);
+  const visibleProjects = projects.filter((project) => project.visible !== false).reverse();
 
   return (
     <div className="grid grid-cols-3 md:grid-cols-6">
@@ -22,7 +22,7 @@ export function ProjectsCollage() {
                 fill
                 sizes="(max-width: 768px) 33vw, 16vw"
                 className="object-cover"
-                priority={project.id <= 12}
+                priority={project.id >= 30}
               />
               <div className={`absolute inset-0 ${overlayClass}`} />
               <div className="absolute inset-x-0 bottom-0 p-2 md:p-2.5">

@@ -18,8 +18,8 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
 
   return (
     <section className="section-space">
-      <div className="container-shell space-y-6 md:space-y-8">
-        <div className="flex justify-end">
+      <div className="w-full space-y-6 md:space-y-8">
+        <div className="flex justify-end px-6 md:px-10">
           <h1 className="font-sans text-4xl font-medium leading-none text-ink md:text-6xl">{dict.nav.projects}</h1>
         </div>
         <ProjectsCollage />

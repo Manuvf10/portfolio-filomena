@@ -283,11 +283,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         'creative-direction': {
           title: 'Creative direction',
-          description: 'We define concepts and narratives that guide the visual meaning of each project.'
+          description: 'We define concepts and narratives that guide and give meaning to each project.'
         },
         'graphic-design': {
           title: 'Graphic design',
-          description: 'We create pieces and visual systems that organize and strengthen communication.'
+          description: 'We adapt to each project. If you need it, we make it happen.'
         },
         'web-design': {
           title: 'Web design',
@@ -295,7 +295,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         'social-media-design': {
           title: 'Social media',
-          description: 'We build pieces and visual systems that bring consistency and digital presence.'
+          description: 'We create pieces and visual systems that bring coherence and personality to your digital presence.'
         },
         branding: {
           title: 'Branding',

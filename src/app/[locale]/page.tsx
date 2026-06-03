@@ -31,7 +31,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <div className="container-shell pb-16 pt-24 md:pb-24 md:pt-32">
         <h1 className="font-sans text-[48px] font-normal leading-none text-black md:text-[68px]">
-          Filomena Club Creativo©
+          Filomena Club Creativo<span className="align-super text-[0.32em] leading-none">©</span>
         </h1>
       </div>
     </section>

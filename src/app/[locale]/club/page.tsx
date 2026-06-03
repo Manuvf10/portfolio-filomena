@@ -92,7 +92,9 @@ export default async function ClubPage({ params }: { params: Promise<{ locale: s
         <ClubSignupForm labels={formLabels} />
 
         <div className="pb-8 pt-24 md:pb-10 md:pt-32">
-          <p className="font-sans text-[42px] font-normal leading-none text-black md:text-[56px]">Filomena Club Creativo©</p>
+          <p className="font-sans text-[42px] font-normal leading-none text-black md:text-[56px]">
+            Filomena Club Creativo<span className="align-super text-[0.32em] leading-none">©</span>
+          </p>
         </div>
       </div>
     </section>
