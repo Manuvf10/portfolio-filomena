@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://filomena.club'),
+  metadataBase: new URL('https://clubfilomena.com'),
   title: 'Filomena Club Creativo',
   description: 'Agencia creativa especializada en soluciones 360° en diseño y creación de contenido.',
   openGraph: {
@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     type: 'website'
   },
   icons: {
-    icon: '/favicon.svg'
+    icon: [{ url: '/favicon.svg?v=2', type: 'image/svg+xml' }],
+    shortcut: '/favicon.svg?v=2',
+    apple: '/favicon.svg?v=2'
   }
 };
 

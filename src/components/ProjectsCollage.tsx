@@ -8,6 +8,7 @@ export function ProjectsCollage() {
     <div className="grid grid-cols-3 md:grid-cols-6">
       {visibleProjects.map((project) => {
         const textTone = project.textColor === 'black' ? 'text-black' : 'text-white';
+        const [projectName, projectService] = project.title.split(' - ', 2);
         const overlayClass =
           project.textColor === 'black'
             ? 'bg-transparent'
@@ -26,7 +27,11 @@ export function ProjectsCollage() {
               />
               <div className={`absolute inset-0 ${overlayClass}`} />
               <div className="absolute inset-x-0 bottom-0 p-2 md:p-2.5">
-                <h3 className={`font-sans text-[10px] leading-tight md:text-[11px] ${textTone}`}>{project.title}</h3>
+                <h3 className={`font-sans text-[10px] leading-tight md:text-[11px] ${textTone}`}>
+                  <span className="block">{projectName}</span>
+                  {projectService ? <span className="block">{projectService}</span> : null}
+                </h3>
+                {project.href ? <p className={`font-sans text-[9px] leading-tight md:text-[10px] ${textTone}`}>Link here</p> : null}
               </div>
             </div>
           </>

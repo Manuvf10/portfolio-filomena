@@ -3,6 +3,6 @@ export const siteSettings = {
   legalName: 'Filomena Club Creativo',
   email: 'hola@clubfilomena.com',
   instagram: 'https://www.instagram.com/club.filomena/',
-  behance: 'https://behance.net/filomenaclub',
+  behance: 'https://www.behance.net/alejandrafilomena',
   location: 'Madrid · Remoto internacional'
 };

@@ -58,6 +58,5 @@ export const projects: ProjectItem[] = [
   project(39, 'NURIA BLANCO - Creación de contenido', 'https://www.instagram.com/reel/DQMXe3RjLey/?igsh=MW9yM3o2NWlkNXY4aw%3D%3D'),
   project(40, 'Diseño de camisetas para SAMANTHA PALOS'),
   project(41, 'BEA GIMENO - Creación de contenido', 'https://www.instagram.com/reel/DSCsEvWDQ_Q/?igsh=MTZvdW1tem03dTRqYw%3D%3D'),
-  // TODO: Make visible when public/images/projects/42.jpg is available.
-  project(42, 'Diseño de Lookbook para INÉS MARTÍN ALCALDE', undefined, false)
+  project(42, 'Diseño de lookbook para INÉS MARTÍN ALCALDE')
 ];

@@ -17,10 +17,10 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
   const dict = getDictionary(locale);
 
   return (
-    <section className="section-space">
-      <div className="w-full space-y-6 md:space-y-8">
-        <div className="flex justify-end px-6 md:px-10">
-          <h1 className="font-sans text-4xl font-medium leading-none text-ink md:text-6xl">{dict.nav.projects}</h1>
+    <section className="bg-white pt-12 md:pt-16">
+      <div className="w-full">
+        <div className="flex justify-end px-6 pb-16 md:px-10 md:pb-24">
+          <h1 className="font-sans text-[34px] font-normal leading-none text-ink md:text-[48px]">{dict.nav.projects}</h1>
         </div>
         <ProjectsCollage />
       </div>

@@ -19,7 +19,7 @@ export function Header({ locale, nav }: HeaderProps) {
     <header className="border-b border-zinc-200 bg-stone/95">
       <div className="container-shell flex h-20 items-center justify-between gap-5 md:grid md:grid-cols-[1fr_auto_1fr]">
         <Link href={localizedPath(locale)} className="font-sans text-[18px] font-medium leading-none tracking-tight">
-          Filomena Club Creativo
+          Filomena Club Creativo<span className="align-super text-[0.45em] leading-none">©</span>
         </Link>
 
         <button

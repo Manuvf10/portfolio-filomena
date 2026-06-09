@@ -9,6 +9,8 @@ const payloadSchema = z.object({
   message: z.string().min(10)
 });
 
+const targetEmail = 'hola@clubfilomena.com';
+
 export async function POST(request: Request) {
   const payload = await request.json();
   const parsed = payloadSchema.safeParse(payload);
@@ -21,7 +23,11 @@ export async function POST(request: Request) {
 
   if (!endpoint) {
     console.warn('[contact] FORMSPREE_ENDPOINT is not configured.');
-    return NextResponse.json({ ok: true, mocked: true });
+    if (process.env.NODE_ENV !== 'production') {
+      return NextResponse.json({ ok: true, mocked: true });
+    }
+
+    return NextResponse.json({ error: 'Contact form is not configured' }, { status: 500 });
   }
 
   const response = await fetch(endpoint, {
@@ -30,7 +36,12 @@ export async function POST(request: Request) {
       'Content-Type': 'application/json',
       Accept: 'application/json'
     },
-    body: JSON.stringify(parsed.data)
+    body: JSON.stringify({
+      ...parsed.data,
+      _replyto: parsed.data.email,
+      _subject: `Nuevo contacto Club Filomena - ${parsed.data.name}`,
+      targetEmail
+    })
   });
 
   if (!response.ok) {
